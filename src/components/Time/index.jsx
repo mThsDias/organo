@@ -9,6 +9,7 @@ const Time = ({
   collaborators,
   onChange,
   handleDelete,
+  handleFavorite,
 }) => {
   return collaborators.length > 0 ? (
     <section
@@ -31,6 +32,8 @@ const Time = ({
             office={collaborator.office}
             image={collaborator.image}
             deleteCollaborator={handleDelete}
+            handleFavorite={handleFavorite}
+            collaborator={collaborator}
           />
         ))}
       </div>
